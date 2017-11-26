@@ -1,0 +1,141 @@
+************Puppet**************
+13.126.220.67
+
+ec2-user
+
+devopsschool.com
+
+NOdes-->
+http://www.devopsschool.com/notes/puppet/
+
+https://goo.gl/uZTfZk
+
+
+doc-->
+https://puppet.com/docs/puppet/5.3/type.html#file
+
+    1  puppet agent --version
+    2  puppet config print
+    3  puppet config print configdir
+    4  puppet config print certname
+    5  puppet config print {configdir sundir ssldir runinterval}
+    6  pwd
+    7  mkdir puppet
+    8  vi puppet1.pp
+    9  puppet apply puppet1.pp
+   10  ls
+   11  sudo puppet parser validate puppet1.pp
+   12   puppet parser validate puppet1.pp
+   13  vi puppet1.pp
+   14  ll -l
+   15  vi puppet1.pp
+   16  puppet agent --version
+   17  puppet apply -e "notify {'Hello World': }"
+
+
+puppet resource service puppet
+
+   38  puppet resource service puppet
+   39  puppet resource computer puppet
+   40  puppet resource file puppet
+   41  vi puppet-service.pp
+   42  puppet parser validate puppet-service.pp
+   43  puppet apply puppet-service.pp
+
+
+----list all resource
+puppet describe --list
+puppet describe notify
+puppet describe user
+puppet describe user --short
+
+
+puppet describe file | grep namevar
+
+file {
+'/etc/motd':
+ensure =>'file',
+content=>'Welcome to my server',
+}
+
+file {'Message File':
+ensure =>'file',
+content=>'Welcome to my server',
+path=> '/etc/motd',
+}
+
+
+package {'ntp':
+ensure=>'installed',#'absent','purged','latest','4.1'
+#name=>'ntp',#not used here as we make use of title
+provider =>'yum', #Normally not required
+}
+
+package {'httpd':
+ensure=>'installed',#'absent','purged','latest','4.1'
+#name=>'httpd',#not used here as we make use of title
+provider =>'yum', #Normally not required
+}
+
+
+service {'ntpd':
+ensure => 'running',#'stopped',
+enable =>true,#false
+}
+
+ --list all services
+puppet resource service
+
+
+--Conf
+$ntp_conf= '#Managed by Puppet 
+server 192.168.0.3 iburst
+driftfile /var/lib/ntp/drift'
+
+file{ '/etc/ntp.conf':
+ensure => 'file',
+content => $ntp_conf,}
+}
+
+---user
+user {'bob':
+ensure => 'present',
+managehome => true,
+groups =>['sudo','users'],
+password => pw_hash('Password1','SHA-512','salt'),
+
+
+}
+
+puppet module install puppetlabs-stdlib --v
+
+group{'admins':
+ensure =>'present',
+}
+
+
+//hosts
+host{'timeserver':
+ip =>'192.168.0.3',
+host_aliases =>'tock',
+}
+
+
+//keys
+ssh_authorized_key{'tux@centos7':
+user => 'tux',
+type => 'ssh-rsa',
+key => 'sdjk abcd',
+
+}
+
+
+--
+
+yum install git
+cd dir
+git init
+git config user.name ""
+git add .
+git commit -m "adding file"
+git push https://github.com/lax4Java/PuppetTrainning.git master
