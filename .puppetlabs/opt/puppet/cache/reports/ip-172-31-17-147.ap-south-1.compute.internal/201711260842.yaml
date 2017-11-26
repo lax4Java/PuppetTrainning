@@ -1,0 +1,303 @@
+--- !ruby/object:Puppet::Transaction::Report
+metrics:
+  resources: !ruby/object:Puppet::Util::Metric
+    name: resources
+    label: Resources
+    values:
+    - - total
+      - Total
+      - 8
+    - - skipped
+      - Skipped
+      - 0
+    - - failed
+      - Failed
+      - 1
+    - - failed_to_restart
+      - Failed to restart
+      - 0
+    - - restarted
+      - Restarted
+      - 0
+    - - changed
+      - Changed
+      - 0
+    - - out_of_sync
+      - Out of sync
+      - 1
+    - - scheduled
+      - Scheduled
+      - 0
+    - - corrective_change
+      - Corrective change
+      - 0
+  time: !ruby/object:Puppet::Util::Metric
+    name: time
+    label: Time
+    values:
+    - - file
+      - File
+      - 0.015772344
+    - - schedule
+      - Schedule
+      - 0.000344765
+    - - filebucket
+      - Filebucket
+      - 7.8775e-05
+    - - config_retrieval
+      - Config retrieval
+      - 0.107060666
+    - - total
+      - Total
+      - 0.12325654999999999
+  changes: !ruby/object:Puppet::Util::Metric
+    name: changes
+    label: Changes
+    values:
+    - - total
+      - Total
+      - 0
+  events: !ruby/object:Puppet::Util::Metric
+    name: events
+    label: Events
+    values:
+    - - total
+      - Total
+      - 1
+    - - failure
+      - Failure
+      - 1
+    - - success
+      - Success
+      - 0
+logs:
+- !ruby/object:Puppet::Util::Log
+  level: :err
+  message: Permission denied @ dir_s_mkdir - /etc/motd20171126-11015-1h5l41u.lock
+  source: Puppet
+  tags:
+  - err
+  time: '2017-11-26T08:42:56.303630304+00:00'
+  file: 
+  line: 
+- !ruby/object:Puppet::Util::Log
+  level: :err
+  message: 'change from {md5}d41d8cd98f00b204e9800998ecf8427e to {md5}16ffa55d51200cb594cf25ae0023e835
+    failed: Permission denied @ dir_s_mkdir - /etc/motd20171126-11015-1h5l41u.lock'
+  source: "/Stage[main]/Main/File[/etc/motd]/content"
+  tags:
+  - err
+  - file
+  - class
+  time: '2017-11-26T08:42:56.303905555+00:00'
+  file: "/home/ec2-user/puppet2.pp"
+  line: 1
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: Applied catalog in 0.03 seconds
+  source: Puppet
+  tags:
+  - notice
+  time: '2017-11-26T08:42:56.316554789+00:00'
+  file: 
+  line: 
+resource_statuses:
+  File[/etc/motd]: !ruby/object:Puppet::Resource::Status
+    title: "/etc/motd"
+    file: "/home/ec2-user/puppet2.pp"
+    line: 1
+    resource: File[/etc/motd]
+    resource_type: File
+    containment_path:
+    - Stage[main]
+    - Main
+    - File[/etc/motd]
+    evaluation_time: 0.015772344
+    tags:
+    - file
+    - class
+    time: '2017-11-26T08:42:56.289205471+00:00'
+    failed: true
+    changed: false
+    out_of_sync: true
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 1
+    events:
+    - !ruby/object:Puppet::Transaction::Event
+      audited: false
+      property: content
+      previous_value: "{md5}d41d8cd98f00b204e9800998ecf8427e"
+      desired_value: "{md5}16ffa55d51200cb594cf25ae0023e835"
+      historical_value: 
+      message: 'change from {md5}d41d8cd98f00b204e9800998ecf8427e to {md5}16ffa55d51200cb594cf25ae0023e835
+        failed: Permission denied @ dir_s_mkdir - /etc/motd20171126-11015-1h5l41u.lock'
+      name: :content_changed
+      status: failure
+      time: 2017-11-26 08:42:56.303778160 +00:00
+      redacted: 
+      corrective_change: false
+    corrective_change: false
+  Schedule[puppet]: !ruby/object:Puppet::Resource::Status
+    title: puppet
+    file: 
+    line: 
+    resource: Schedule[puppet]
+    resource_type: Schedule
+    containment_path:
+    - Schedule[puppet]
+    evaluation_time: 9.4798e-05
+    tags:
+    - schedule
+    - puppet
+    time: '2017-11-26T08:42:56.305264557+00:00'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[hourly]: !ruby/object:Puppet::Resource::Status
+    title: hourly
+    file: 
+    line: 
+    resource: Schedule[hourly]
+    resource_type: Schedule
+    containment_path:
+    - Schedule[hourly]
+    evaluation_time: 5.247e-05
+    tags:
+    - schedule
+    - hourly
+    time: '2017-11-26T08:42:56.305454752+00:00'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[daily]: !ruby/object:Puppet::Resource::Status
+    title: daily
+    file: 
+    line: 
+    resource: Schedule[daily]
+    resource_type: Schedule
+    containment_path:
+    - Schedule[daily]
+    evaluation_time: 5.2201e-05
+    tags:
+    - schedule
+    - daily
+    time: '2017-11-26T08:42:56.305603105+00:00'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[weekly]: !ruby/object:Puppet::Resource::Status
+    title: weekly
+    file: 
+    line: 
+    resource: Schedule[weekly]
+    resource_type: Schedule
+    containment_path:
+    - Schedule[weekly]
+    evaluation_time: 4.9305e-05
+    tags:
+    - schedule
+    - weekly
+    time: '2017-11-26T08:42:56.305735292+00:00'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[monthly]: !ruby/object:Puppet::Resource::Status
+    title: monthly
+    file: 
+    line: 
+    resource: Schedule[monthly]
+    resource_type: Schedule
+    containment_path:
+    - Schedule[monthly]
+    evaluation_time: 4.8561e-05
+    tags:
+    - schedule
+    - monthly
+    time: '2017-11-26T08:42:56.305878528+00:00'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Schedule[never]: !ruby/object:Puppet::Resource::Status
+    title: never
+    file: 
+    line: 
+    resource: Schedule[never]
+    resource_type: Schedule
+    containment_path:
+    - Schedule[never]
+    evaluation_time: 4.743e-05
+    tags:
+    - schedule
+    - never
+    time: '2017-11-26T08:42:56.306006412+00:00'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+  Filebucket[puppet]: !ruby/object:Puppet::Resource::Status
+    title: puppet
+    file: 
+    line: 
+    resource: Filebucket[puppet]
+    resource_type: Filebucket
+    containment_path:
+    - Filebucket[puppet]
+    evaluation_time: 7.8775e-05
+    tags:
+    - filebucket
+    - puppet
+    time: '2017-11-26T08:42:56.306185751+00:00'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+    corrective_change: false
+host: ip-172-31-17-147.ap-south-1.compute.internal
+time: 2017-11-26 08:42:56.280698186 +00:00
+kind: apply
+report_format: 6
+puppet_version: 4.10.9
+configuration_version: 1511685776
+transaction_uuid: 1ff947df-f2a7-4c0d-9e18-112ce6d06be7
+code_id: 
+catalog_uuid: a840819e-fb63-4540-bd8f-69d13da5fd95
+cached_catalog_status: not_used
+master_used: 
+environment: production
+status: failed
+noop: false
+noop_pending: false
+corrective_change: false

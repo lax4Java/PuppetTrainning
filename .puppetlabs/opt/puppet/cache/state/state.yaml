@@ -1,0 +1,86 @@
+---
+File[/home/ec2-user/.puppetlabs/etc/puppet]:
+  :checked: 2017-11-26 07:24:32.055023182 +00:00
+  :synced: 2017-11-26 07:24:32.056570763 +00:00
+File[/home/ec2-user/.puppetlabs/etc/code]:
+  :checked: 2017-11-26 07:24:32.056943342 +00:00
+  :synced: 2017-11-26 07:24:32.058215947 +00:00
+File[/home/ec2-user/.puppetlabs/opt/puppet/cache]:
+  :checked: 2017-11-26 07:24:32.058533680 +00:00
+  :synced: 2017-11-26 07:24:32.059791432 +00:00
+File[/home/ec2-user/.puppetlabs/var/log]:
+  :checked: 2017-11-26 07:24:32.060180101 +00:00
+  :synced: 2017-11-26 07:24:32.061477272 +00:00
+File[/home/ec2-user/.puppetlabs/opt/puppet/cache/state]:
+  :checked: 2017-11-26 07:24:32.061821601 +00:00
+  :synced: 2017-11-26 07:24:32.063198254 +00:00
+File[/home/ec2-user/.puppetlabs/var/run]:
+  :checked: 2017-11-26 07:24:32.063532593 +00:00
+  :synced: 2017-11-26 07:24:32.064838067 +00:00
+File[/home/ec2-user/.puppetlabs/opt/puppet/cache/lib]:
+  :checked: 2017-11-26 07:24:32.065159876 +00:00
+  :synced: 2017-11-26 07:24:32.066474239 +00:00
+File[/home/ec2-user/.puppetlabs/opt/puppet/cache/preview]:
+  :checked: 2017-11-26 07:24:32.066794362 +00:00
+  :synced: 2017-11-26 07:24:32.068233280 +00:00
+File[/home/ec2-user/.puppetlabs/etc/puppet/ssl]:
+  :checked: 2017-11-26 07:24:32.068562003 +00:00
+  :synced: 2017-11-26 07:24:32.069922291 +00:00
+File[/home/ec2-user/.puppetlabs/etc/puppet/ssl/certs]:
+  :checked: 2017-11-26 07:24:32.070298923 +00:00
+  :synced: 2017-11-26 07:24:32.071694863 +00:00
+File[/home/ec2-user/.puppetlabs/etc/puppet/ssl/public_keys]:
+  :checked: 2017-11-26 07:24:32.072020497 +00:00
+  :synced: 2017-11-26 07:24:32.073407789 +00:00
+File[/home/ec2-user/.puppetlabs/etc/puppet/ssl/certificate_requests]:
+  :checked: 2017-11-26 07:24:32.073709534 +00:00
+  :synced: 2017-11-26 07:24:32.075140743 +00:00
+File[/home/ec2-user/.puppetlabs/etc/puppet/ssl/private_keys]:
+  :checked: 2017-11-26 07:24:32.075478498 +00:00
+  :synced: 2017-11-26 07:24:32.076895527 +00:00
+File[/home/ec2-user/.puppetlabs/etc/puppet/ssl/private]:
+  :checked: 2017-11-26 07:24:32.077233737 +00:00
+  :synced: 2017-11-26 07:24:32.078605715 +00:00
+File[/home/ec2-user/.puppetlabs/opt/puppet/cache/client_yaml]:
+  :checked: 2017-11-26 07:24:32.078948573 +00:00
+  :synced: 2017-11-26 07:24:32.080334467 +00:00
+File[/home/ec2-user/.puppetlabs/opt/puppet/cache/client_data]:
+  :checked: 2017-11-26 07:24:32.080670505 +00:00
+  :synced: 2017-11-26 07:24:32.082115491 +00:00
+File[/home/ec2-user/.puppetlabs/opt/puppet/cache/clientbucket]:
+  :checked: 2017-11-26 07:24:32.082448404 +00:00
+  :synced: 2017-11-26 07:24:32.083884774 +00:00
+File[/home/ec2-user/.puppetlabs/opt/puppet/cache/state/graphs]:
+  :checked: 2017-11-26 07:24:32.084182453 +00:00
+  :synced: 2017-11-26 07:24:32.085599210 +00:00
+File[/home/ec2-user/.puppetlabs/opt/puppet/cache/facts.d]:
+  :checked: 2017-11-26 07:24:32.085933284 +00:00
+  :synced: 2017-11-26 07:24:32.087356066 +00:00
+:configuration: {}
+Stage[main]:
+  :checked: 2017-11-26 08:42:56.288540978 +00:00
+Class[Settings]:
+  :checked: 2017-11-26 08:42:56.288873713 +00:00
+Class[Main]:
+  :checked: 2017-11-26 08:42:56.288999528 +00:00
+Notify[Hello World]:
+  :checked: 2017-11-26 07:32:28.400820396 +00:00
+  :synced: 2017-11-26 07:32:28.401299811 +00:00
+Schedule[puppet]:
+  :checked: 2017-11-26 08:42:56.305351753 +00:00
+Schedule[hourly]:
+  :checked: 2017-11-26 08:42:56.305496381 +00:00
+Schedule[daily]:
+  :checked: 2017-11-26 08:42:56.305650215 +00:00
+Schedule[weekly]:
+  :checked: 2017-11-26 08:42:56.305779725 +00:00
+Schedule[monthly]:
+  :checked: 2017-11-26 08:42:56.305921919 +00:00
+Schedule[never]:
+  :checked: 2017-11-26 08:42:56.306048755 +00:00
+Filebucket[puppet]:
+  :checked: 2017-11-26 08:42:56.306258066 +00:00
+Service[puppet]:
+  :checked: 2017-11-26 07:37:19.094185098 +00:00
+File[/etc/motd]:
+  :checked: 2017-11-26 08:42:56.289510408 +00:00

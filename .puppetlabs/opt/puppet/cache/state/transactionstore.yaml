@@ -1,0 +1,22 @@
+---
+resources:
+  File[/etc/motd]:
+    parameters:
+      ensure:
+        system_value:
+        - :file
+      content:
+        system_value:
+        - "{md5}d41d8cd98f00b204e9800998ecf8427e"
+      seluser:
+        system_value:
+        - system_u
+      selrole:
+        system_value:
+        - object_r
+      seltype:
+        system_value:
+        - etc_t
+      selrange:
+        system_value:
+        - s0
